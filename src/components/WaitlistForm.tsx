@@ -10,12 +10,13 @@ interface WaitlistFormProps {
 
 export function WaitlistForm({ className = "", size = "default" }: WaitlistFormProps) {
   const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !email.trim()) {
+    if (!name.trim() || !phone.trim() || !email.trim()) {
       toast({
         title: "Please fill in all fields",
         variant: "destructive",
@@ -34,6 +35,7 @@ export function WaitlistForm({ className = "", size = "default" }: WaitlistFormP
     });
     
     setName("");
+    setPhone("");
     setEmail("");
     setIsSubmitting(false);
   };
@@ -43,31 +45,43 @@ export function WaitlistForm({ className = "", size = "default" }: WaitlistFormP
 
   return (
     <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
-      <div className="flex flex-col sm:flex-row gap-3">
-        <Input
-          type="text"
-          placeholder="Your name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className={`flex-1 ${inputSize} bg-card border-border focus:border-primary`}
-          disabled={isSubmitting}
-        />
-        <Input
-          type="email"
-          placeholder="Email address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className={`flex-1 ${inputSize} bg-card border-border focus:border-primary`}
-          disabled={isSubmitting}
-        />
-        <Button
-          type="submit"
-          size={buttonSize}
-          disabled={isSubmitting}
-          className="sm:px-8"
-        >
-          {isSubmitting ? "Joining..." : "Join Waitlist"}
-        </Button>
+      <div className="flex flex-col gap-3">
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Input
+            type="text"
+            placeholder="Your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className={`flex-1 ${inputSize} bg-card border-border focus:border-primary`}
+            disabled={isSubmitting}
+          />
+          <Input
+            type="tel"
+            placeholder="Phone number"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className={`flex-1 ${inputSize} bg-card border-border focus:border-primary`}
+            disabled={isSubmitting}
+          />
+        </div>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Input
+            type="email"
+            placeholder="Email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className={`flex-1 ${inputSize} bg-card border-border focus:border-primary`}
+            disabled={isSubmitting}
+          />
+          <Button
+            type="submit"
+            size={buttonSize}
+            disabled={isSubmitting}
+            className="sm:px-8"
+          >
+            {isSubmitting ? "Joining..." : "Join Waitlist"}
+          </Button>
+        </div>
       </div>
     </form>
   );

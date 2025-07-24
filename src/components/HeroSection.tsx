@@ -1,5 +1,5 @@
 import { WaitlistForm } from "./WaitlistForm";
-import heroAbstract from "@/assets/hero-abstract.jpg";
+import heroImage from "@/assets/hero-nigerian-woman.jpg";
 
 export function HeroSection() {
   return (
@@ -9,14 +9,13 @@ export function HeroSection() {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground">
-                Save small.{" "}
-                <span className="text-gradient">Stay ready.</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                Save Today,{" "}
+                <span className="text-gradient">Stay Covered Tomorrow.</span>
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                BOMUD helps you build a health safety net through tiny, consistent savings. 
-                No complex plans. Just peace of mind.
+                BOMUD helps you build micro-savings for health emergencies — no paperwork, no stress.
               </p>
             </div>
 
@@ -28,30 +27,30 @@ export function HeroSection() {
                   A
                 </div>
                 <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-xs font-semibold text-accent-foreground">
-                  K
+                  F
                 </div>
                 <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-xs font-semibold text-primary-foreground">
-                  M
+                  B
                 </div>
               </div>
-              <span>Join 1,200+ people already on the waitlist</span>
+              <span>Join 2,500+ Nigerians already on the waitlist</span>
             </div>
           </div>
 
           {/* Visual */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary-lighter to-accent-light p-8">
+            <div className="relative rounded-2xl overflow-hidden">
               <img
-                src={heroAbstract}
-                alt="Health resilience platform visualization"
-                className="w-full h-auto rounded-lg"
+                src={heroImage}
+                alt="Nigerian woman confidently using BOMUD app for health savings"
+                className="w-full h-auto rounded-2xl object-cover aspect-video"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent rounded-2xl" />
             </div>
             
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-success rounded-2xl shadow-lg hidden md:block" />
-            <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-accent rounded-xl shadow-lg hidden md:block" />
+            <div className="absolute -top-4 -right-4 w-16 h-16 bg-success rounded-2xl shadow-lg hidden md:block opacity-90" />
+            <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-accent rounded-xl shadow-lg hidden md:block opacity-90" />
           </div>
         </div>
       </div>

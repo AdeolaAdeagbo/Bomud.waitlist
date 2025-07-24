@@ -11,8 +11,8 @@ export function Footer() {
               BOMUD
             </div>
             <p className="text-secondary-foreground/70 max-w-md">
-              Building health resilience through smart savings. 
-              Empowering communities to stay financially prepared for health emergencies.
+              Building health resilience for Nigerian families through smart micro-savings. 
+              Empowering our communities to stay financially prepared for health emergencies.
             </p>
           </div>
 
