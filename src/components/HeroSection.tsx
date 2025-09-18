@@ -9,7 +9,7 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="space-y-8">
-            <div className="flex items-center mb-6">
+            <div className="flex items-center mb-6 p-4 rounded-2xl bg-[#1a4a4a] w-fit">
               <img src={bomudLogo} alt="BOMUD" className="h-12 w-auto" />
             </div>
             
