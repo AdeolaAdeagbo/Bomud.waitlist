@@ -5,7 +5,7 @@ import nigerianPrideIcon from "@/assets/nigerian-pride-icon.jpg";
 export function WhyBomudWorksSection() {
   const features = [
     {
-      title: "Save as low as ₦100/day",
+      title: "Save as low as ₦50/day",
       description: "Start building your health safety net with amounts that fit your budget.",
       icon: saveNairaIcon,
       color: "bg-primary-lighter"

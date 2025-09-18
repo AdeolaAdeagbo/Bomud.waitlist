@@ -11,7 +11,7 @@ export function NigerianStatsSection() {
       color: "bg-accent text-accent-foreground"
     },
     {
-      number: "₦100",
+      number: "₦50",
       label: "minimum daily savings to get started",
       color: "bg-success text-success-foreground"
     },

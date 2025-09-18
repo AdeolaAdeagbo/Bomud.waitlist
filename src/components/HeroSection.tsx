@@ -1,5 +1,6 @@
 import { WaitlistForm } from "./WaitlistForm";
 import heroImage from "@/assets/hero-nigerian-woman.jpg";
+import bomudLogo from "@/assets/bomud-logo.png";
 
 export function HeroSection() {
   return (
@@ -8,6 +9,10 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="space-y-8">
+            <div className="flex items-center mb-6">
+              <img src={bomudLogo} alt="BOMUD" className="h-12 w-auto" />
+            </div>
+            
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 Save Today,{" "}

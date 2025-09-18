@@ -1,4 +1,5 @@
 import { Twitter, Linkedin, Instagram } from "lucide-react";
+import bomudLogo from "@/assets/bomud-logo.png";
 
 export function Footer() {
   return (
@@ -7,8 +8,8 @@ export function Footer() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="text-2xl font-bold">
-              BOMUD
+            <div className="flex items-center">
+              <img src={bomudLogo} alt="BOMUD" className="h-8 w-auto" />
             </div>
             <p className="text-secondary-foreground/70 max-w-md">
               Building health resilience for Nigerian families through smart micro-savings. 
