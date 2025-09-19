@@ -27,8 +27,8 @@ export function WaitlistForm({ className = "", size = "default" }: WaitlistFormP
     setIsSubmitting(true);
     
     try {
-      // Google Apps Script Web App URL - replace with your actual URL
-      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+      // Google Apps Script Web App URL
+      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyBgI1qAbEeua2bqRDDm2XBuNzvzBlmXdUHsB3PE5JH7Jk2ss5_enYMvgNjGcgFm7SC6g/exec";
       
       const formData = new FormData();
       formData.append('name', name.trim());
