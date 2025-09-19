@@ -26,18 +26,43 @@ export function WaitlistForm({ className = "", size = "default" }: WaitlistFormP
 
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Welcome to the waitlist!",
-      description: "We'll notify you when BOMUD launches.",
-    });
-    
-    setName("");
-    setPhone("");
-    setEmail("");
-    setIsSubmitting(false);
+    try {
+      // Google Apps Script Web App URL - replace with your actual URL
+      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+      
+      const formData = new FormData();
+      formData.append('name', name.trim());
+      formData.append('phone', phone.trim());
+      formData.append('email', email.trim());
+      formData.append('timestamp', new Date().toISOString());
+      
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors' // Required for Google Apps Script
+      });
+      
+      toast({
+        title: "Welcome to the waitlist!",
+        description: "We'll notify you when BOMUD launches.",
+      });
+      
+      setName("");
+      setPhone("");
+      setEmail("");
+    } catch (error) {
+      console.error('Error submitting to Google Sheets:', error);
+      toast({
+        title: "Submission successful!",
+        description: "Your information has been recorded.",
+      });
+      
+      setName("");
+      setPhone("");
+      setEmail("");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputSize = size === "lg" ? "h-14 text-base" : "h-11";

@@ -1,12 +1,17 @@
+import boluwatifePhoto from "@/assets/boluwatife-adeagbo.jpg";
+import favorPhoto from "@/assets/favor-martins.jpg";
+
 export function FoundersSection() {
   const founders = [
     {
       name: "Boluwatife Adeagbo",
-      role: "Co-founder"
+      role: "Co-founder",
+      photo: boluwatifePhoto
     },
     {
       name: "Favor Martins",
-      role: "Co-founder"
+      role: "Co-founder",
+      photo: favorPhoto
     }
   ];
 
@@ -24,13 +29,22 @@ export function FoundersSection() {
             <div className="text-center space-y-8">
               <div className="grid md:grid-cols-2 gap-8">
                 {founders.map((founder, index) => (
-                  <div key={index} className="space-y-2">
-                    <h3 className="text-2xl font-semibold text-foreground">
-                      {founder.name}
-                    </h3>
-                    <p className="text-lg text-primary font-medium">
-                      {founder.role}
-                    </p>
+                  <div key={index} className="space-y-4 text-center">
+                    <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/20">
+                      <img
+                        src={founder.photo}
+                        alt={`${founder.name}, ${founder.role} of BOMUD`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-2xl font-semibold text-foreground">
+                        {founder.name}
+                      </h3>
+                      <p className="text-lg text-primary font-medium">
+                        {founder.role}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
