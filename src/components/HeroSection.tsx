@@ -16,29 +16,26 @@ export function HeroSection() {
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 Save Today,{" "}
-                <span className="text-gradient">Stay Covered Tomorrow.</span>
+                <span className="text-gradient">Stay Covered Tomorrow</span>
               </h1>
               
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                BOMUD helps you build micro-savings for health emergencies — no paperwork, no stress.
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl font-medium">
+                Build micro-savings for health emergencies with Nigeria's most trusted fintech-health platform
               </p>
             </div>
 
             <WaitlistForm size="lg" className="max-w-2xl" />
             
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full bg-success flex items-center justify-center text-xs font-semibold text-success-foreground">
-                  A
-                </div>
-                <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-xs font-semibold text-accent-foreground">
-                  F
-                </div>
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-xs font-semibold text-primary-foreground">
-                  B
-                </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                <span className="font-medium">2,500+ families joined</span>
               </div>
-              <span>Join 2,500+ Nigerians already on the waitlist</span>
+              <div className="w-1 h-4 bg-border"></div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <span className="font-medium">Trusted & secure</span>
+              </div>
             </div>
           </div>
 

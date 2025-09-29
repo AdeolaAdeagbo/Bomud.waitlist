@@ -29,25 +29,24 @@ export function WhyBomudWorksSection() {
       <div className="container-custom">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
-            Why BOMUD Works
+            Why Leading Families Choose BOMUD
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We understand the challenges Nigerian families face with healthcare costs. 
-            That's why we built something different.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-medium">
+            Experience the difference of Nigeria's first fintech-health platform built specifically for Nigerian families and their unique healthcare needs.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {features.map((feature, index) => (
-            <div key={index} className="text-center">
-              <div className="space-y-6">
+            <div key={index} className="group">
+              <div className="bg-card rounded-3xl p-8 shadow-sm border border-border hover:shadow-md transition-all duration-300 text-center h-full">
                 {/* Icon */}
-                <div className={`w-20 h-20 mx-auto rounded-2xl ${feature.color} p-5 flex items-center justify-center`}>
-                  <img src={feature.icon} alt="" className="w-10 h-10 object-contain" />
+                <div className={`w-16 h-16 mx-auto rounded-2xl ${feature.color} p-4 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300`}>
+                  <img src={feature.icon} alt="" className="w-8 h-8 object-contain" />
                 </div>
                 
                 {/* Content */}
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <h3 className="text-xl font-semibold text-foreground">
                     {feature.title}
                   </h3>

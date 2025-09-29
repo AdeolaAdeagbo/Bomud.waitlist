@@ -6,13 +6,12 @@ export function FinalCTASection() {
     <section className="section-padding bg-primary text-primary-foreground">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="space-y-4">
+          <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold">
-              Ready to Secure Your Family's Health?
+              Secure Your Family's Health Future Today
             </h2>
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-              Join thousands of Nigerian families who are taking control of their health finances. 
-              Get early access and exclusive founding member benefits.
+            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto font-medium">
+              Join thousands of Nigerian families building financial security for healthcare. Get early access and exclusive founding member benefits.
             </p>
           </div>
 

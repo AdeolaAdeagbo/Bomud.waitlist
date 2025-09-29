@@ -27,21 +27,21 @@ export function NigerianStatsSection() {
       <div className="container-custom">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
-            The Reality for Nigerian Families
+            The Healthcare Challenge in Nigeria
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Healthcare costs shouldn't bankrupt families. Here's why we need a better solution.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-medium">
+            Understanding the urgent need for accessible healthcare financing solutions across Nigerian families.
           </p>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
-            <div key={index} className={`${stat.color} rounded-2xl p-8 text-center`}>
-              <div className="space-y-3">
-                <div className="text-4xl md:text-5xl font-bold">
+            <div key={index} className={`${stat.color} rounded-3xl p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300`}>
+              <div className="space-y-4">
+                <div className="text-4xl md:text-5xl font-bold tracking-tight">
                   {stat.number}
                 </div>
-                <div className="text-sm md:text-base opacity-90 leading-tight">
+                <div className="text-sm md:text-base opacity-90 leading-tight font-medium">
                   {stat.label}
                 </div>
               </div>
