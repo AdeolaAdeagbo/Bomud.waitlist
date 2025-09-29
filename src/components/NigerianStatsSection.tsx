@@ -36,9 +36,9 @@ export function NigerianStatsSection() {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
-            <div key={index} className={`${stat.color} rounded-3xl p-8 text-center shadow-sm hover:shadow-md transition-shadow duration-300`}>
+            <div key={index} className={`${stat.color} rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group animate-scale-in`} style={{animationDelay: `${index * 0.1}s`}}>
               <div className="space-y-4">
-                <div className="text-4xl md:text-5xl font-bold tracking-tight">
+                <div className="text-4xl md:text-5xl font-bold tracking-tight group-hover:scale-105 transition-transform duration-300">
                   {stat.number}
                 </div>
                 <div className="text-sm md:text-base opacity-90 leading-tight font-medium">

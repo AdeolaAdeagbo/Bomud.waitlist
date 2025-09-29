@@ -38,19 +38,19 @@ export function WhyBomudWorksSection() {
 
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {features.map((feature, index) => (
-            <div key={index} className="group">
-              <div className="bg-card rounded-3xl p-8 shadow-sm border border-border hover:shadow-md transition-all duration-300 text-center h-full">
+            <div key={index} className="group animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
+              <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-border/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 text-center h-full hover:-translate-y-2">
                 {/* Icon */}
-                <div className={`w-16 h-16 mx-auto rounded-2xl ${feature.color} p-4 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300`}>
-                  <img src={feature.icon} alt="" className="w-8 h-8 object-contain" />
+                <div className={`w-20 h-20 mx-auto rounded-3xl ${feature.color} p-4 flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl`}>
+                  <img src={feature.icon} alt="" className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 
                 {/* Content */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-foreground">
+                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed font-medium">
                     {feature.description}
                   </p>
                 </div>

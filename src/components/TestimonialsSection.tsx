@@ -33,16 +33,16 @@ export function TestimonialsSection() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-card rounded-3xl p-8 shadow-sm border border-border hover:shadow-md transition-all duration-300">
+            <div key={index} className="bg-card/50 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-border/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-2 group animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
               <div className="space-y-6">
-                <Quote className="w-6 h-6 text-primary opacity-60" />
+                <Quote className="w-8 h-8 text-primary opacity-60 group-hover:opacity-80 group-hover:scale-110 transition-all duration-300" />
                 
-                <p className="text-foreground leading-relaxed text-lg font-medium">
+                <p className="text-foreground leading-relaxed text-lg font-medium group-hover:text-primary/90 transition-colors duration-300">
                   "{testimonial.quote}"
                 </p>
                 
-                <div className="pt-4 border-t border-border">
-                  <div className="font-semibold text-foreground">
+                <div className="pt-4 border-t border-border/50">
+                  <div className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                     {testimonial.name}
                   </div>
                   <div className="text-sm text-muted-foreground font-medium">
